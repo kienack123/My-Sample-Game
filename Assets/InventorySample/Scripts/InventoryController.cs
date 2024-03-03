@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
-
 public class InventoryController : MonoBehaviour
 {
     [SerializeField] private ItemController _itemController;
@@ -37,6 +33,8 @@ public class InventoryController : MonoBehaviour
             GameObject _cell = Instantiate(_cellPrefab);
             _cell.gameObject.transform.SetParent(_itemContainer);
             _itemCell.gameObject.transform.SetParent(_cell.transform);
+            
+            Debug.Log("111111111111111111111");
         }
     }
 
@@ -71,11 +69,11 @@ public class InventoryController : MonoBehaviour
         {
             if (item.transform.position.y > 350f || item.transform.position.y < 100f)
             {
-                item.transform.gameObject.SetActive(false);
+                item.enabled = false;
             }
             else
             {
-                item.transform.gameObject.SetActive(true);
+                item.enabled=true;
             }
         }
     }
@@ -90,14 +88,11 @@ public class ItemData
     public int price;
     public ItemColor color;
 }
-
-
 public enum ItemColor
 {
-    green,
-    blue,
-    red,
-    gold
-
+    Green,
+    Blue,
+    Red,
+    Gold
 }
 

@@ -18,5 +18,4 @@ public class ItemController : MonoBehaviour ,IPointerClickHandler
     {
         Debug.Log(_itemData.id);
     }
-    
 }
