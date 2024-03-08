@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.dbrizov.naughtybeziercurves": {
+      "version": "https://github.com/dbrizov/NaughtyBezierCurves.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "a03040a199787420187535838a622cbdcd9226e2"
+    },
     "com.unity.collab-proxy": {
       "version": "2.2.0",
       "depth": 0,
